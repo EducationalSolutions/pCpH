@@ -1,0 +1,197 @@
+main
+{
+	padding: 0 2em;
+}
+[type=text], [type=password], [type=date], [type=datetime], [type=datetime-local], [type=month], [type=week], [type=email], [type=number], [type=search], [type=tel], [type=time], [type=url], [type=color], textarea
+{
+	width: auto;
+	display: inline-block;
+}
+
+.top-bar
+{
+	position: fixed;
+	width: 100%;
+	z-index: 1000;
+}
+
+.top-bar, .top-bar ul {
+	background-color: black;
+	color: white;
+}
+.top-bar a
+{
+	color: #44EE44;
+}
+.top-bar a:hover,
+.top-bar a:active
+{
+	color: white;
+}
+.dropdown.menu .is-dropdown-submenu-parent.is-down-arrow>a::after 
+{
+	border-color: #44EE44 transparent transparent;
+}
+.dropdown.menu .is-dropdown-submenu-parent.is-down-arrow>a:hover::after,
+.dropdown.menu .is-dropdown-submenu-parent.is-down-arrow>a:active::after
+{
+	border-color: white transparent transparent;
+}
+.dropdown.menu .submenu 
+{
+	background-color: black;
+	border-color: black;
+}
+@media screen and (min-width: 40em) {
+	.content
+	{
+		padding-top: 4em;
+	}
+}
+.callout 
+{
+	margin: 1em 2em;
+	padding: 1em 2em;
+}
+.dropdown.menu .is-dropdown-submenu-parent.opens-left .submenu.help
+{
+	right: 0;
+}
+
+.equation
+{
+	font-size: 1.6em;	
+}
+
+label.m,
+label.massType,
+label.halfLife,
+label.halfLifeIncrement,
+label.concentrationTime,
+label.with-units,
+.groundwaterStep label.c0
+{
+	width: 8em;
+	display: inline-block;
+}
+
+.graphWrapper
+{
+	margin-left: 1.5em;
+	margin-right: 1em;
+}
+.jxgbox
+{
+	width: 400px;
+	height: 400px;
+
+	top: 0;
+	left: 0;
+}
+.jxgbox [id$="navigationbar"]
+{
+	background-color: black !important;
+	color: #44EE44 !important;
+}
+.jxgbox [id$="navigationbar"]
+{
+	background-color: black !important;
+	color: #44EE44 !important;
+	display: none;
+}
+.jxgbox [id$="navigationbar"] span:hover
+{
+	background-color: black !important;
+	color: white !important;
+}
+.JXGinfobox
+{
+	color: black !important;
+	z-index: 100 !important;
+}
+
+h2 .MathJax_Display
+{
+	display: inline-block !important;
+	width: 70%;
+	float: right;
+}
+.relative
+{
+	position: relative;
+}
+
+@media screen and (min-width: 40em) {
+	.x-axis-label
+	{
+		width: 400px;
+	}
+	
+	.jxgbox
+	{
+		float: left;
+	}
+	.concentrations 
+	{
+		float: left;
+		width: 12em;
+		margin-left: 2em;
+		height: 400px;
+	}
+}
+
+.y-axis-label
+{
+	position: absolute;
+	top: 200px;
+	white-space: nowrap;
+	width: 1em;
+	padding: 0;
+	transform: rotate(-90deg) translate(-150px, 0);
+}
+
+
+.monoprotic div,
+.diprotic div,
+.triprotic div,
+.aerobic div,
+.anearobic div
+{
+	height: 4em;
+}
+.monoprotic .ha,
+.diprotic .a,
+.triprotic .h2a,
+.aerobic .h2co3,
+.anearobic .h2s
+{
+	color: #BF6083;
+}
+.monoprotic .a,
+.diprotic .h2a,
+.triprotic .h3a,
+.aerobic .hco3,
+.anearobic .hs
+{
+	color: #1197B4;
+}
+
+.diprotic .ha,
+.triprotic .a,
+.aerobic .co3,
+.anearobic .s
+{
+	color: #A69F3F;
+}
+
+.triprotic .ha,
+.aerobic .totalc,
+.anearobic .totals
+{
+	color: #D94F30;
+}
+
+[id^="closedGraph_jxgBoard1L3_ticks_"]
+{
+	/*top: 10px !important;*/
+}
