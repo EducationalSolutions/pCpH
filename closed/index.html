@@ -1,0 +1,114 @@
+---
+layout: default
+title: pC/pH of a Closed System
+name: closed
+---
+<div class="pcphClosed">
+	<div class="row">
+		<div class="small-12 small columns">
+			<h1>{{ page.title }}</h1>
+		</div>
+	</div>
+	<div class="row">
+		<div class="small-12 columns">
+			<form class="pcph-closed-form fate-form" action="../closed/" method="get" id="pcph-closed-form" accept-charset="UTF-8">
+
+				<div class="row">
+					<div class="x-axis-label closedGraph columns small-12 text-center"></div>
+				</div>
+				<div class="row relative">
+					<div class="graphWrapper small-12 columns">
+						<div id="closedGraph" class="jxgbox"></div>
+						<div class="concentrations">
+							<fieldset class="fieldset">
+								<legend>Molar concentration of species at cursor</legend>
+								<div class="monoprotic row">
+									<div class="columns medium-12 small-6 ha">
+										[HA]:
+										<strong></strong>
+									</div>
+									<div class="columns medium-12 small-6 a">
+										[A<sup>-</sup>]:
+										<strong></strong>
+									</div>
+								</div>
+								<div class="diprotic row">
+									<div class="columns medium-12 small-4 h2a">
+										[H<sub>2</sub>A]:
+										<strong></strong>
+									</div>
+									<div class="columns medium-12 small-4 ha">
+										[HA<sup>-</sup>]:
+										<strong></strong>
+									</div>
+									<div class="columns medium-12 small-4 a">
+										[A<sup>2-</sup>]:
+										<strong></strong>
+									</div>
+								</div>
+								<div class="triprotic row">
+									<div class="columns medium-12 small-3 h3a">
+										[H<sub>3</sub>A]:
+										<strong></strong>
+									</div>
+									<div class="columns medium-12 small-3 h2a">
+										[H<sub>2</sub>A<sup>-</sup>]:
+										<strong></strong>
+									</div>
+									<div class="columns medium-12 small-3 ha">
+										[HA<sup>2-</sup>]:
+										<strong></strong>
+									</div>
+									<div class="columns medium-12 small-3 a">
+										[A<sup>3-</sup>]:
+										<strong></strong>
+									</div>
+								</div>
+							</fieldset>
+						</div>
+					</div>
+
+					</div>
+					<div class="y-axis-label closedGraph"></div>
+
+				<div class="row">
+					<div class="columns small-6">
+						<fieldset class="fieldset">
+							<legend>Choose system type</legend>
+							<label for="systemType" class="systemType">
+							<select id="systemType" name="systemType" class="systemType">
+								<option value="monoprotic" selected="selected">Monoprotic</option>
+								<option value="diprotic">Diprotic</option>
+								<option value="triprotic">Triprotic</option>
+							</select>
+							</label>
+						</fieldset>
+					</div>
+
+					<div class="columns small-6">
+						<fieldset class="fieldset pkas">
+							<legend>Enter the concentration and pKas</legend>
+							<label for="conc" class="conc required">Concentration
+							<input type="text" id="conc" name="conc" value="0.01" size="5" maxlength="128" class="conc required" required="required" aria-required="true" />
+							</label>
+							<label for="pka1" class="pka1 pka required">pKa 1
+							<input type="text" id="pka1" name="pka1" value="4" size="5" maxlength="128" class="pka1 required" required="required" aria-required="true" />
+							</label>
+							<label for="pka2" class="pka2 pka diprotic required">pKa 2
+							<input type="text" id="pka2" name="pka2" value="7" size="5" maxlength="128" class="pka2 required" required="required" aria-required="true" />
+							</label>
+							<label for="pka3" class="pka3 pka triprotic required">pKa 3
+							<input type="text" id="pka3" name="pka3" value="12" size="5" maxlength="128" class="pka3 required" required="required" aria-required="true" />
+							</label>
+
+						</fieldset>
+					</div>
+
+
+
+		</form>
+	</div>
+</div>
+
+{% include js.html %}
+<script src="closed.js"></script>

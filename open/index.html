@@ -1,0 +1,98 @@
+---
+layout: default
+title: pC/pH of an Open System
+name: open
+---
+
+<div class="pcphOpen">
+	<div class="row">
+		<div class="small-12 small columns">
+			<h1>{{ page.title }}</h1>
+		</div>
+	</div>
+	<div class="row">
+		<div class="small-12 columns">
+			<form class="pcph-open-form fate-form" action="../open/" method="get" id="pcph-open-form" accept-charset="UTF-8">
+
+				<div class="row">
+					<div class="x-axis-label openGraph columns small-12 text-center"></div>
+				</div>
+				<div class="row relative">
+					<div class="graphWrapper small-12 columns">
+						<div id="openGraph" class="jxgbox"></div>
+						<div class="concentrations">
+							<fieldset class="fieldset">
+								<legend>Molar concentration of species at cursor</legend>
+								<div class="aerobic row">
+									<div class="columns medium-12 small-3 h2co3">
+										[H<sub>2</sub>CO<sub>3</sub>]:
+										<strong></strong>
+									</div>
+									<div class="columns medium-12 small-3 hco3">
+										[HCO<sub>3</sub><sup>-</sup>]:
+										<strong></strong>
+									</div>
+									<div class="columns medium-12 small-3 co3">
+										[CO<sub>3</sub><sup>2-</sup>]:
+										<strong></strong>
+									</div>
+									<div class="columns medium-12 small-3 totalc">
+										[Total Carbon]:<br />
+										<strong></strong>
+									</div>
+								</div>
+								<div class="anearobic row">
+									<div class="columns medium-12 small-3 h2s">
+										[H<sub>2</sub>S]:
+										<strong></strong>
+									</div>
+									<div class="columns medium-12 small-3 hs">
+										[HS<sup>-</sup>]:
+										<strong></strong>
+									</div>
+									<div class="columns medium-12 small-3 s">
+										[S<sup>2-</sup>]:
+										<strong></strong>
+									</div>
+									<div class="columns medium-12 small-3 totals">
+										[Total Sulphur]:<br />
+										<strong></strong>
+									</div>
+								</div>
+							</fieldset>
+						</div>
+					</div>
+
+					</div>
+					<div class="y-axis-label openGraph"></div>
+
+				<div class="row">
+					<div class="columns small-6">
+						<fieldset class="fieldset">
+							<legend>Choose system type</legend>
+							<label for="systemType" class="systemType">
+							<select id="systemType" name="systemType" class="systemType">
+								<option value="aerobic" selected="selected">Aerobic H<sub>2</sub>CO<sub>2</sub></option>
+								<option value="anearobic">Anearobic H<sub>2</sub>S</option>
+							</select>
+							</label>
+						</fieldset>
+					</div>
+
+					<div class="columns small-6">
+						<fieldset class="fieldset pkas">
+							<legend>Enter the concentration of species at cursor</legend>
+							<label for="conc" class="conc required">Concentration
+							<input type="text" id="conc" name="conc" value="380" size="5" maxlength="128" class="conc required" required="required" aria-required="true" /> ppm
+							</label>
+						</fieldset>
+					</div>
+
+
+
+		</form>
+	</div>
+</div>
+
+{% include js.html %}
+<script src="open.js"></script>
