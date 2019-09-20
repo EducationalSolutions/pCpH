@@ -28,7 +28,7 @@ main
 {
 	color: white;
 }
-.dropdown.menu .is-dropdown-submenu-parent.is-down-arrow>a::after 
+.dropdown.menu .is-dropdown-submenu-parent.is-down-arrow>a::after
 {
 	border-color: #44EE44 transparent transparent;
 }
@@ -37,7 +37,7 @@ main
 {
 	border-color: white transparent transparent;
 }
-.dropdown.menu .submenu 
+.dropdown.menu .submenu
 {
 	background-color: black;
 	border-color: black;
@@ -48,7 +48,7 @@ main
 		padding-top: 4em;
 	}
 }
-.callout 
+.callout
 {
 	margin: 1em 2em;
 	padding: 1em 2em;
@@ -60,7 +60,7 @@ main
 
 .equation
 {
-	font-size: 1.6em;	
+	font-size: 1.6em;
 }
 
 label.m,
@@ -126,15 +126,15 @@ h2 .MathJax_Display
 	{
 		width: 400px;
 	}
-	
+
 	.jxgbox
 	{
 		float: left;
 	}
-	.concentrations 
+	.concentrations
 	{
 		float: left;
-		width: 12em;
+		width: 20em;
 		margin-left: 2em;
 		height: 400px;
 	}
